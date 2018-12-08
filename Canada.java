@@ -260,6 +260,30 @@ public class Canada
         return  containString;
     }
 
+    public ArrayList<String> getProvincesWhoseNameStartsWith(char letter)
+    {
+        if (letter == ' ' || letter == '\0') {
+            throw new IllegalArgumentException("Invalid letter");
+        }
+           
+        ArrayList<String> prov = new ArrayList<>();
+        for(ProvinceTerritory province : provinces)
+        {
+            if ( province != null && province.getName().toLowerCase().charAt(0) == Character.toLowerCase(letter))
+            {
+                prov.add(province.getName());
+            }
+           
+        }
+        if (prov.size() > 0)
+        {
+            return prov;
+        }
+        else{
+            return null;
+        }
+    }
+
     
 }
 
