@@ -269,7 +269,7 @@ public class Canada
         ArrayList<String> prov = new ArrayList<>();
         for(ProvinceTerritory province : provinces)
         {
-            if ( province != null && province.getName().toLowerCase().charAt(0) == Character.toLowerCase(letter))
+            if ( province != null && province.getName().toLowerCase().charAt(0).equals(Character.toLowerCase(letter)))
             {
                 prov.add(province.getName());
             }
